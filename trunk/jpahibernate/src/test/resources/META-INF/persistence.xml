@@ -1,0 +1,35 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+   version="1.0">
+   <persistence-unit name="manager1" transaction-type="RESOURCE_LOCAL">
+      <class>com.enjava.tutorial.hibernate.Profesor</class>
+      <class>com.enjava.tutorial.hibernate.Alumno</class>
+      <class>libreria.Autor</class>
+      <class>libreria.Capitulo</class>
+      <class>libreria.Cliente</class>
+      <class>libreria.Editorial</class>
+      <class>libreria.Libro</class>
+      <class>libreria.Pedido</class>
+      <class>libreria.PedidoLinea</class>
+      <class>es.cea.inmobiliaria.Barrio</class>
+      <class>es.cea.inmobiliaria.Casa</class>
+      <class>es.cea.inmobiliaria.Ciudad</class>
+      <class>es.cea.inmobiliaria.Habitacion</class>
+      <class>es.cea.inmobiliaria.Inmobiliaria</class>
+      <class>es.cea.chat.Color</class>
+      <class>es.cea.chat.Usuario</class>
+      <class>es.cea.chat.Chat</class>
+      <class>es.cea.chat.Mensaje</class>
+      <properties>
+         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+         <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+         <property name="hibernate.connection.username" value="root"/>
+         <property name="hibernate.connection.password" value="root"/>
+         <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/libreria?createDatabaseIfNotExist=true"/>
+         <property name="hibernate.hbm2ddl.auto" value="create"/>
+         <property name="hibernate.max_fetch_depth" value="3"/>
+        <property name="hibernate.show_sql" value="true" />
+
+      </properties>
+   </persistence-unit></persistence>
