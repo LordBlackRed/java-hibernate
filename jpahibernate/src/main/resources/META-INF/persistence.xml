@@ -1,0 +1,31 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+   version="1.0">
+   <persistence-unit name="manager1" transaction-type="JTA">
+      <provider>org.hibernate.ejb.HibernatePersistence</provider>
+      <jta-data-source>jdbc/mysqltest</jta-data-source>
+      <class>com.enjava.tutorial.hibernate.Profesor</class>
+      <class>com.enjava.tutorial.hibernate.Alumno</class>
+      <class>libreria.Autor</class>
+      <class>libreria.Capitulo</class>
+      <class>libreria.Cliente</class>
+      <class>libreria.Editorial</class>
+      <class>libreria.Libro</class>
+      <class>libreria.Pedido</class>
+      <class>libreria.PedidoLinea</class>
+      
+      <properties>
+          <property name="jboss.entity.manager.factory.jndi.name" value="java:/libreriaJpaHibernate"/>
+      
+         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+         <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+         <property name="hibernate.connection.username" value="root"/>
+         <property name="hibernate.connection.password" value="root"/>
+         <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/prueba?createDatabaseIfNotExist=true"/>
+         <property name="hibernate.hbm2ddl.auto" value="create"/>
+         <property name="hibernate.max_fetch_depth" value="3"/>
+        <property name="hibernate.show_sql" value="true" />
+
+      </properties>
+   </persistence-unit></persistence>
